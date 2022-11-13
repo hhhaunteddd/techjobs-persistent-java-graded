@@ -14,8 +14,8 @@ public abstract class AbstractEntity {
     @GeneratedValue
     private int id;
 
-    @NotBlank
-    @Size(max=50)
+    @NotBlank(message = "Name is required.")
+    @Size(max=75)
     private String name;
 
     public int getId() {
